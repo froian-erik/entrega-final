@@ -1,0 +1,74 @@
+@import "variables";
+
+.contenedor-sobrenosotros{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "descripcion sobrenosotrosimg"
+    "secciones sobrenosotrosimg"
+    ;
+    background-color: white;
+     
+}
+
+.descripcion{
+    grid-area: descripcion;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.descripcion h2{
+    color: black;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.descripcion p{
+    color:black;
+
+}
+
+.sobrenosotrosimg{
+    grid-area: sobrenosotrosimg;
+    width: 40vw;
+}
+
+.sobrenosotrosimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secciones{
+    grid-area: secciones;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 20px;
+    height: 100%;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body a{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.card-body a:hover{
+    background-color: white;
+    color: black;
+}
