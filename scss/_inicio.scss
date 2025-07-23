@@ -1,9 +1,7 @@
 @import "variables";
-@import "base";
-@import "grid";
+@import "header";
 
-
-main{
+.contenedor-inicio{
     grid-area: main;
     display: flex;
     flex-direction: column;

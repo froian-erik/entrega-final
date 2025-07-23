@@ -1,15 +1,15 @@
 @import "variables";
 
-.contenedor-sobrenosotros{
+ .contenedor-sobrenosotros{
     display: grid;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "descripcion sobrenosotrosimg"
-    "secciones sobrenosotrosimg"
+    "descripcion"
+    "sobrenosotrosimg"
+    "secciones"
     ;
-    background-color: white;
-     
+    background-color: $secondary-color;
 }
 
 .descripcion{
@@ -34,7 +34,7 @@
 
 .sobrenosotrosimg{
     grid-area: sobrenosotrosimg;
-    width: 40vw;
+    width: 100vw;
 }
 
 .sobrenosotrosimg img{
@@ -46,7 +46,7 @@
 .secciones{
     grid-area: secciones;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 30px;
     gap: 20px;
     height: 100%;
@@ -71,4 +71,29 @@
 .card-body a:hover{
     background-color: white;
     color: black;
+}
+
+
+/* ---------------mediaquery---------------- */
+
+@media (min-width: 768px) {
+    .contenedor-sobrenosotros{
+        display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "descripcion sobrenosotrosimg"
+    "secciones sobrenosotrosimg"
+    ;
+    }
+
+    .sobrenosotrosimg{
+    width: 40vw;
+}
+}
+
+@media (min-width: 1024px) {
+    .secciones{
+        flex-direction: row;
+    }
 }

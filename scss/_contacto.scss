@@ -1,28 +1,28 @@
 @import "variables";
-@import "grid";
+
+
 
 .contenedor-contacto{
-    display: grid;
-    grid-template-columns: 1fr 2fr ;
-    grid-template-areas:
-    
-    "info form";
+    grid-area: main;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "form"
+    "info"
+    ;
     
     gap: 30px;
-    height: 100vh;
+    height: 100%;
     padding: 10px;
-    background-color: white;
+    background-color: $secondary-color;
     margin-left: 30px;
 }
-
+    
 .formulario{
     grid-area: form;
     margin-top: 80px;
-    background-color: white;
+    background-color: $secondary-color;
     padding: 20px;
 }
-
-
 
 
 form{
@@ -64,16 +64,16 @@ form input[type="submit"]{
 .datos{
     grid-area: info;
     place-items: center;
-    background-color: white;
-    color: black;
+    background-color: $secondary-color;
+    color: $text-color;
     padding: 20px;
     
 
 }
 
 .h2-contacto{
-    color: black;
-    font-size: 40px;
+    color: $text-color;
+    font-size: $font-size-h2;
     text-transform: uppercase;
     text-align: start;
     margin-top: 50px;
@@ -81,7 +81,7 @@ form input[type="submit"]{
 }
 
 .datos h3{
-    color: black;
+    color: $text-color;
     font-size: 30px;
     text-decoration: solid;
 }
@@ -101,7 +101,22 @@ form input[type="submit"]{
 }
 
 .datos p a{
-    color: black;
+    color: $text-color;
     font-size: 18px;
     text-decoration: none;
+}
+
+
+/*------mediaquery------ */
+
+@media(min-width: 768px){
+    .contenedor-contacto{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas:
+    
+    "info form";
+    height: 100vh;
+    }
 }
